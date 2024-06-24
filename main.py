@@ -107,7 +107,7 @@ def connect_to_discord(socket, message):
                 'os': 'windows',
                 'browser': 'stonks',
                 'device': 'stonks'},
-            'intents': 8}})
+            'intents': 2048}})
     socket.send(identify_message)
 
 

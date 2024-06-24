@@ -33,12 +33,12 @@ def relative_strength_index(timeframe, period, symbol, channel_id):
             dataset.append(x['data'][0]['close'])
             curr_RSI = (rsi(close=pd.Series(data=dataset, dtype=float), window=period)[period*4-1])
             if curr_RSI > 70 or curr_RSI < 30:
-                print(rq.post(url='https://discord.com/api//channels//{}//messages'.format(channel_id),
+                rq.post(url='https://discord.com/api//channels//{}//messages'.format(channel_id),
                               headers={'Authorization': 'Bot {}'.format(config.TOKEN), 'Content-type': 'application/json'},
                               json={
                                   "content": "The RSI for {} pair (timeframe - {} | period - {}) is {:.2f}".format(symbol, timeframe, period, curr_RSI),
                                   "tts": False,
-                                  }))
+                                  })
 
     session = pybit_WebSocket(channel_type='spot', testnet=False)
     session.kline_stream(symbol=symbol, interval=timeframe, callback=handler)
