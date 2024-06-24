@@ -1,4 +1,3 @@
-
-TOKEN = #your bot token here
-CLIENT_ID = #your App's client_id here
+TOKEN =  #put your discord app's bot token here
+CLIENT_ID =  #put your discord app's client_id here
 
