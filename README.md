@@ -24,6 +24,6 @@ Things that went wrong and could probably be improved on:
       - Discord API recommends checking for a HEARTBEAT ACK response and restarting the connection if you don't get HEARTBEAT ACK after a ping - the bot doesn't do that
       - originally i wanted to split bot, bybit and discord logic into separate files but it all got mixed up. Could've been worse i suppose
       - the bot should be fine with adding more commands, so thats a plus
-      - I spent too much on this
-      - K-Line chart is pretty
+      - I spent too time much on this
+      - K-Line charts are pretty
    
